@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<config format="1" version="2020.01.0 (experiment/NTNU-distributed-NSB,6d672bde3,dirty)" system="lauv-simulator-1" i18n="en_US">
+<config format="1" version="2020.01.0 (experiment/NTNU-distributed-NSB,6bf868132,dirty)" system="lauv-simulator-1" i18n="en_US">
 <section name="Text Message Parser" name-i18n="Text Message Parser">
 <param name="Entity Label">
 <name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Text Message Parser</default><units></units><desc>Main entity label</desc></param>
@@ -262,80 +262,6 @@
 <name-i18n>Ramp Actuation Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.0</default><units></units><desc>Ramp actuation limit when the value is rising in actuation per second</desc></param>
 <param name="Log PID Parcels">
 <name-i18n>Log PID Parcels</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Log the size of each PID parcel</desc></param>
-</section>
-<section name="Path Control" name-i18n="Path Control">
-<param name="Entity Label">
-<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Path Control</default><units></units><desc>Main entity label</desc></param>
-<param name="Execution Priority">
-<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
-<param name="Activation Time">
-<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
-<param name="Deactivation Time">
-<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
-<param name="Debug Level">
-<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Debug</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
-<param name="Control Frequency">
-<name-i18n>Control Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units>Hz</units><desc>Control frequency (&lt; 0 for event-driven EstimatedState processing)</desc></param>
-<param name="State Report Frequency">
-<name-i18n>State Report Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units>Hz</units><desc>State report frequency</desc></param>
-<param name="Course Control">
-<name-i18n>Course Control</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable course control</desc></param>
-<param name="Along-track -- Monitor">
-<name-i18n>Along-track -- Monitor</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable along-track error monitoring</desc></param>
-<param name="Along-track -- Check Period">
-<name-i18n>Along-track -- Check Period</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>20</default><units>s</units><desc>Period for along-track error check</desc></param>
-<param name="Along-track -- Minimum Speed">
-<name-i18n>Along-track -- Minimum Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.05</default><units>m/s</units><desc>Minimum speed for along-track progress</desc></param>
-<param name="Along-track -- Minimum Yaw">
-<name-i18n>Along-track -- Minimum Yaw</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>2</default><units>°/s</units><desc>Minimum yaw speed for track bearing convergence</desc></param>
-<param name="Cross-track -- Monitor">
-<name-i18n>Cross-track -- Monitor</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable cross-track error monitoring</desc></param>
-<param name="Cross-track -- Distance Limit">
-<name-i18n>Cross-track -- Distance Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>25</default><units>m</units><desc>Distance threshold value for cross-track error</desc></param>
-<param name="Cross-track -- Time Limit">
-<name-i18n>Cross-track -- Time Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>20</default><units>s</units><desc>Time threshold value for cross-track error</desc></param>
-<param name="Cross-track -- Nav. Unc. Factor">
-<name-i18n>Cross-track -- Nav. Unc. Factor</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc></desc></param>
-<param name="Position Jump Threshold">
-<name-i18n>Position Jump Threshold</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10.0</default><units>m</units><desc>Threshold for a jump in EstimatedState to turn monitors off</desc></param>
-<param name="Position Jump Time Factor">
-<name-i18n>Position Jump Time Factor</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units>m/s</units><desc>Relation between monitor disabling time and position jump</desc><min>0.1</min></param>
-<param name="ETA Minimum Speed">
-<name-i18n>ETA Minimum Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.1</default><units>m/s</units><desc>ETA minimum admissible speed</desc><min>0.1</min></param>
-<param name="New Reference Timeout">
-<name-i18n>New Reference Timeout</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5.0</default><units>s</units><desc>Timeout for new incoming path reference</desc><min>3</min><max>10</max></param>
-<param name="Bottom Track -- Enabled">
-<name-i18n>Bottom Track -- Enabled</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable or disable bottom track control</desc></param>
-<param name="Bottom Track -- Forward Samples">
-<name-i18n>Bottom Track -- Forward Samples</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>7</default><units></units><desc>Number of samples for forward range moving average</desc></param>
-<param name="Bottom Track -- Safe Pitch">
-<name-i18n>Bottom Track -- Safe Pitch</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>35.0</default><units>°</units><desc>Safe pitch angle to perform bottom tracking</desc></param>
-<param name="Bottom Track -- Slope Hysteresis">
-<name-i18n>Bottom Track -- Slope Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.5</default><units>°</units><desc>Slope hysteresis when recovering from avoidance</desc></param>
-<param name="Bottom Track -- Minimum Range">
-<name-i18n>Bottom Track -- Minimum Range</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>8.0</default><units>m</units><desc>Minimum admissible forward range for bottom tracking</desc></param>
-<param name="Bottom Track -- Check Trend">
-<name-i18n>Bottom Track -- Check Trend</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Check slope angle trend in unsafe state</desc></param>
-<param name="Bottom Track -- Execution Frequency">
-<name-i18n>Bottom Track -- Execution Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units>Hz</units><desc>Bottom tracker&apos;s execution frequency</desc></param>
-<param name="Bottom Track -- Depth Avoidance">
-<name-i18n>Bottom Track -- Depth Avoidance</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable or disable obstacle avoidance during depth control</desc></param>
-<param name="Bottom Track -- Admissible Altitude">
-<name-i18n>Bottom Track -- Admissible Altitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>2.5</default><units>m</units><desc>Admissible altitude when doing depth control</desc></param>
-<param name="Bottom Track -- Minimum Depth">
-<name-i18n>Bottom Track -- Minimum Depth</name-i18n><type>real</type><visibility>user</visibility><scope>maneuver</scope><default>0.0</default><units>m</units><desc>Minimum depth to maintain during bottom tracking</desc></param>
-<param name="Maximum Track Length">
-<name-i18n>Maximum Track Length</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>25000</default><units>m</units><desc>Maximum adimissible track length</desc></param>
-<param name="Corridor -- Width">
-<name-i18n>Corridor -- Width</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.5</default><units>m</units><desc>Width of corridor for attack entry angle</desc><min>1.0</min><max>50.0</max></param>
-<param name="Corridor -- Entry Angle">
-<name-i18n>Corridor -- Entry Angle</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.0</default><units>°</units><desc>Attack angle when lateral track error equals corridor width</desc><min>2</min><max>45</max></param>
-<param name="Extended Control -- Enabled">
-<name-i18n>Extended Control -- Enabled</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Enable extended (refined) corridor control</desc></param>
-<param name="Extended Control -- Controller Gain">
-<name-i18n>Extended Control -- Controller Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.0</default><units></units><desc>Gain for extended control</desc></param>
-<param name="Extended Control -- Turn Rate Gain">
-<name-i18n>Extended Control -- Turn Rate Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.0</default><units></units><desc>Turn rate gain for extended control</desc></param>
 </section>
 <section name="Communications Relay Maneuver" name-i18n="Communications Relay Maneuver">
 <param name="Entity Label">
@@ -710,6 +636,402 @@
 <name-i18n>Entity Label - Current 2</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Servo Controller 2</default><units></units><desc></desc></param>
 <param name="Entity Label - Current 3">
 <name-i18n>Entity Label - Current 3</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Servo Controller 3</default><units></units><desc></desc></param>
+</section>
+<section name="Consensus" name-i18n="Consensus">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Consensus</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Ellipse -- Origin x">
+<name-i18n>Ellipse -- Origin x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>x-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Origin y">
+<name-i18n>Ellipse -- Origin y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>y-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Depth">
+<name-i18n>Ellipse -- Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc>Depth of the center of the ellipse</desc></param>
+<param name="Ellipse -- Semimajor Axis">
+<name-i18n>Ellipse -- Semimajor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>60</default><units></units><desc>Semimajor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Semiminor Axis">
+<name-i18n>Ellipse -- Semiminor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>40</default><units></units><desc>Semiminor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Z Amplitude">
+<name-i18n>Ellipse -- Z Amplitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>4</default><units></units><desc>Amplitude of oscillations in the z-axis</desc><min>0.</min><max>100.</max></param>
+<param name="Ellipse -- Clockwise">
+<name-i18n>Ellipse -- Clockwise</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if the path goes clockwise; false if anticlockwise</desc></param>
+<param name="Ellipse -- Orientation">
+<name-i18n>Ellipse -- Orientation</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Orientation (yaw angle) of the ellipse. Zero means semimajor axis facing north</desc></param>
+<param name="Ellipse -- Z Frequency">
+<name-i18n>Ellipse -- Z Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc>Frequency of oscillations in the z-axis</desc></param>
+<param name="Ellipse -- Initial Phase">
+<name-i18n>Ellipse -- Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Initial phase of the ellipse</desc></param>
+<param name="Ellipse -- Z Initial Phase">
+<name-i18n>Ellipse -- Z Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1.5707963267948966</default><units></units><desc>Initial phase of oscillations in the z-axis</desc></param>
+<param name="LOS -- Lookahead Distance">
+<name-i18n>LOS -- Lookahead Distance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.</default><units></units><desc>Lookahead distance of the LOS algorithm</desc><min>1.</min><max>100.</max></param>
+<param name="LOS -- Adaptive">
+<name-i18n>LOS -- Adaptive</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if using adaptive lookahead distance</desc></param>
+<param name="LOS -- Speed">
+<name-i18n>LOS -- Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.3</default><units></units><desc>Path following speed</desc><min>0.5</min><max>2.</max></param>
+<param name="LOS -- Gain">
+<name-i18n>LOS -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Path parameter update gain</desc><min>0.1</min><max>2.</max></param>
+<param name="Formation Keeping -- Shape">
+<name-i18n>Formation Keeping -- Shape</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>10, 0, 0</default><units></units><desc>Position of the vehicle within the formation</desc><size>3</size></param>
+<param name="Obstacle Avoidance -- Minimum Cone Angle">
+<name-i18n>Obstacle Avoidance -- Minimum Cone Angle</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Radius">
+<name-i18n>Obstacle Avoidance -- Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Hysteresis">
+<name-i18n>Obstacle Avoidance -- Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>3</default><units></units><desc></desc><min>0</min><max>10</max></param>
+<param name="Initial Covariance">
+<name-i18n>Initial Covariance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc></desc><min>0.000001</min></param>
+<param name="Process Noise">
+<name-i18n>Process Noise</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.01</default><units></units><desc></desc><min>0.000001</min></param>
+<param name="Steady-state Formation Radius">
+<name-i18n>Steady-state Formation Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc></desc></param>
+<param name="Formation Radius Time Constant">
+<name-i18n>Formation Radius Time Constant</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.05</default><units></units><desc></desc></param>
+<param name="Minimum Comm Period">
+<name-i18n>Minimum Comm Period</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc></desc><min>1</min></param>
+<param name="Maximum Comm Period">
+<name-i18n>Maximum Comm Period</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>90</default><units></units><desc></desc><min>10</min></param>
+<param name="Maximum Number of Consecutive Transmissions">
+<name-i18n>Maximum Number of Consecutive Transmissions</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>2</default><units></units><desc></desc></param>
+<param name="Position Update -- Gain">
+<name-i18n>Position Update -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.2</default><units></units><desc></desc></param>
+<param name="Position Update -- Decimation">
+<name-i18n>Position Update -- Decimation</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>20</default><units></units><desc></desc><min>1</min></param>
+<param name="Event Trigger -- Parameter Penalty">
+<name-i18n>Event Trigger -- Parameter Penalty</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>100</default><units></units><desc></desc><min>0.01</min></param>
+<param name="Event Trigger -- Position Penalty">
+<name-i18n>Event Trigger -- Position Penalty</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc></desc><min>0.01</min></param>
+<param name="Artificial Delay">
+<name-i18n>Artificial Delay</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc></desc></param>
+<param name="Artificial Packet Loss">
+<name-i18n>Artificial Packet Loss</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.1</default><units></units><desc></desc></param>
+<param name="Active">
+<name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+</section>
+<section name="Curved Path Following" name-i18n="Curved Path Following">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Curved Path Following</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Ellipse -- Origin x">
+<name-i18n>Ellipse -- Origin x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>x-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Origin y">
+<name-i18n>Ellipse -- Origin y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>y-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Depth">
+<name-i18n>Ellipse -- Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Depth of the center of the ellipse</desc></param>
+<param name="Ellipse -- Semimajor Axis">
+<name-i18n>Ellipse -- Semimajor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>50.</default><units></units><desc>Semimajor axis of the ellipse</desc><min>10.</min><max>100.</max></param>
+<param name="Ellipse -- Semiminor Axis">
+<name-i18n>Ellipse -- Semiminor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>30.</default><units></units><desc>Semiminor axis of the ellipse</desc><min>10.</min><max>100.</max></param>
+<param name="Ellipse -- Z Amplitude">
+<name-i18n>Ellipse -- Z Amplitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Amplitude of oscillations in the z-axis</desc><min>0.</min><max>10.</max></param>
+<param name="Ellipse -- Clockwise">
+<name-i18n>Ellipse -- Clockwise</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if the path goes clockwise; false if anticlockwise</desc></param>
+<param name="Ellipse -- Orientation">
+<name-i18n>Ellipse -- Orientation</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Orientation (yaw angle) of the ellipse. Zero means semimajor axis facing north</desc></param>
+<param name="Ellipse -- Z Frequency">
+<name-i18n>Ellipse -- Z Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Frequency of oscillations in the z-axis</desc></param>
+<param name="Ellipse -- Initial Phase">
+<name-i18n>Ellipse -- Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Initial phase of the ellipse</desc></param>
+<param name="Ellipse -- Z Initial Phase">
+<name-i18n>Ellipse -- Z Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Initial phase of oscillations in the z-axis</desc></param>
+<param name="LOS -- Lookahead Distance">
+<name-i18n>LOS -- Lookahead Distance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.</default><units></units><desc>Lookahead distance of the LOS algorithm</desc><min>1.</min><max>100.</max></param>
+<param name="LOS -- Adaptive">
+<name-i18n>LOS -- Adaptive</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if using adaptive lookahead distance</desc></param>
+<param name="LOS -- Speed">
+<name-i18n>LOS -- Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.3</default><units></units><desc>Path following speed</desc><min>0.5</min><max>2.</max></param>
+<param name="LOS -- Gain">
+<name-i18n>LOS -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Path parameter update gain</desc><min>0.1</min><max>2.</max></param>
+<param name="Obstacle Avoidance -- Minimum Cone Angle">
+<name-i18n>Obstacle Avoidance -- Minimum Cone Angle</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Radius">
+<name-i18n>Obstacle Avoidance -- Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Hysteresis">
+<name-i18n>Obstacle Avoidance -- Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>3</default><units></units><desc></desc><min>0</min><max>10</max></param>
+<param name="Active">
+<name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<param name="Experiment Stop Time">
+<name-i18n>Experiment Stop Time</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stopped after the given time. Enter negative value to ignore this.</desc></param>
+<param name="Experiment Stop Parameter">
+<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
+</section>
+<section name="Distributed NSB" name-i18n="Distributed NSB">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Distributed NSB</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Ellipse -- Origin x">
+<name-i18n>Ellipse -- Origin x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>x-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Origin y">
+<name-i18n>Ellipse -- Origin y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>y-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Depth">
+<name-i18n>Ellipse -- Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc>Depth of the center of the ellipse</desc></param>
+<param name="Ellipse -- Semimajor Axis">
+<name-i18n>Ellipse -- Semimajor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>60</default><units></units><desc>Semimajor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Semiminor Axis">
+<name-i18n>Ellipse -- Semiminor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>40</default><units></units><desc>Semiminor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Z Amplitude">
+<name-i18n>Ellipse -- Z Amplitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>4</default><units></units><desc>Amplitude of oscillations in the z-axis</desc><min>0.</min><max>100.</max></param>
+<param name="Ellipse -- Clockwise">
+<name-i18n>Ellipse -- Clockwise</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if the path goes clockwise; false if anticlockwise</desc></param>
+<param name="Ellipse -- Orientation">
+<name-i18n>Ellipse -- Orientation</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Orientation (yaw angle) of the ellipse. Zero means semimajor axis facing north</desc></param>
+<param name="Ellipse -- Z Frequency">
+<name-i18n>Ellipse -- Z Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc>Frequency of oscillations in the z-axis</desc></param>
+<param name="Ellipse -- Initial Phase">
+<name-i18n>Ellipse -- Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Initial phase of the ellipse</desc></param>
+<param name="Ellipse -- Z Initial Phase">
+<name-i18n>Ellipse -- Z Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1.5707963267948966</default><units></units><desc>Initial phase of oscillations in the z-axis</desc></param>
+<param name="LOS -- Lookahead Distance">
+<name-i18n>LOS -- Lookahead Distance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.</default><units></units><desc>Lookahead distance of the LOS algorithm</desc><min>1.</min><max>100.</max></param>
+<param name="LOS -- Adaptive">
+<name-i18n>LOS -- Adaptive</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if using adaptive lookahead distance</desc></param>
+<param name="LOS -- Speed">
+<name-i18n>LOS -- Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.3</default><units></units><desc>Path following speed</desc><min>0.5</min><max>2.</max></param>
+<param name="LOS -- Gain">
+<name-i18n>LOS -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Path parameter update gain</desc><min>0.1</min><max>2.</max></param>
+<param name="Formation Keeping -- Shape">
+<name-i18n>Formation Keeping -- Shape</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>10, 0, 0</default><units></units><desc>Position of the vehicle within the formation</desc><size>3</size></param>
+<param name="Formation Keeping -- Gain">
+<name-i18n>Formation Keeping -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Formation keeping task gain</desc><min>0.</min></param>
+<param name="Formation Keeping -- Maximum Velocity">
+<name-i18n>Formation Keeping -- Maximum Velocity</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Formation keeping velocity limit</desc><min>0.</min></param>
+<param name="Obstacle Avoidance -- Minimum Cone Angle">
+<name-i18n>Obstacle Avoidance -- Minimum Cone Angle</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Radius">
+<name-i18n>Obstacle Avoidance -- Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Hysteresis">
+<name-i18n>Obstacle Avoidance -- Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>3</default><units></units><desc></desc><min>0</min><max>10</max></param>
+<param name="Active">
+<name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<param name="Experiment Stop Time">
+<name-i18n>Experiment Stop Time</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stopped after the given time. Enter negative value to ignore this.</desc></param>
+<param name="Experiment Stop Parameter">
+<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
+</section>
+<section name="Obstacle Simulator" name-i18n="Obstacle Simulator">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Obstacle Simulator</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>None</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Execution Frequency">
+<name-i18n>Execution Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units>Hz</units><desc>Frequency at which task is executed</desc></param>
+<param name="Speed">
+<name-i18n>Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.6667</default><units></units><desc></desc></param>
+<param name="Origin Latitude">
+<name-i18n>Origin Latitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.71816285</default><units></units><desc></desc></param>
+<param name="Origin Longitude">
+<name-i18n>Origin Longitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-0.15166961</default><units></units><desc></desc></param>
+<param name="Course">
+<name-i18n>Course</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.57079632</default><units></units><desc></desc></param>
+<param name="Depth">
+<name-i18n>Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Active">
+<name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+</section>
+<section name="Path Control" name-i18n="Path Control">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Path Control</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Control Frequency">
+<name-i18n>Control Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units>Hz</units><desc>Control frequency (&lt; 0 for event-driven EstimatedState processing)</desc></param>
+<param name="State Report Frequency">
+<name-i18n>State Report Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units>Hz</units><desc>State report frequency</desc></param>
+<param name="Course Control">
+<name-i18n>Course Control</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable course control</desc></param>
+<param name="Along-track -- Monitor">
+<name-i18n>Along-track -- Monitor</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Enable along-track error monitoring</desc></param>
+<param name="Along-track -- Check Period">
+<name-i18n>Along-track -- Check Period</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15</default><units>s</units><desc>Period for along-track error check</desc></param>
+<param name="Along-track -- Minimum Speed">
+<name-i18n>Along-track -- Minimum Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.25</default><units>m/s</units><desc>Minimum speed for along-track progress</desc></param>
+<param name="Along-track -- Minimum Yaw">
+<name-i18n>Along-track -- Minimum Yaw</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units>°/s</units><desc>Minimum yaw speed for track bearing convergence</desc></param>
+<param name="Cross-track -- Monitor">
+<name-i18n>Cross-track -- Monitor</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Enable cross-track error monitoring</desc></param>
+<param name="Cross-track -- Distance Limit">
+<name-i18n>Cross-track -- Distance Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15</default><units>m</units><desc>Distance threshold value for cross-track error</desc></param>
+<param name="Cross-track -- Time Limit">
+<name-i18n>Cross-track -- Time Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>10</default><units>s</units><desc>Time threshold value for cross-track error</desc></param>
+<param name="Cross-track -- Nav. Unc. Factor">
+<name-i18n>Cross-track -- Nav. Unc. Factor</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc></desc></param>
+<param name="Position Jump Threshold">
+<name-i18n>Position Jump Threshold</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>7.0</default><units>m</units><desc>Threshold for a jump in EstimatedState to turn monitors off</desc></param>
+<param name="Position Jump Time Factor">
+<name-i18n>Position Jump Time Factor</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.3</default><units>m/s</units><desc>Relation between monitor disabling time and position jump</desc><min>0.1</min></param>
+<param name="ETA Minimum Speed">
+<name-i18n>ETA Minimum Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.0</default><units>m/s</units><desc>ETA minimum admissible speed</desc><min>0.1</min></param>
+<param name="New Reference Timeout">
+<name-i18n>New Reference Timeout</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units>s</units><desc>Timeout for new incoming path reference</desc><min>3</min><max>10</max></param>
+<param name="Bottom Track -- Enabled">
+<name-i18n>Bottom Track -- Enabled</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Enable or disable bottom track control</desc></param>
+<param name="Bottom Track -- Forward Samples">
+<name-i18n>Bottom Track -- Forward Samples</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc>Number of samples for forward range moving average</desc></param>
+<param name="Bottom Track -- Safe Pitch">
+<name-i18n>Bottom Track -- Safe Pitch</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.0</default><units>°</units><desc>Safe pitch angle to perform bottom tracking</desc></param>
+<param name="Bottom Track -- Slope Hysteresis">
+<name-i18n>Bottom Track -- Slope Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.5</default><units>°</units><desc>Slope hysteresis when recovering from avoidance</desc></param>
+<param name="Bottom Track -- Minimum Range">
+<name-i18n>Bottom Track -- Minimum Range</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>4.0</default><units>m</units><desc>Minimum admissible forward range for bottom tracking</desc></param>
+<param name="Bottom Track -- Check Trend">
+<name-i18n>Bottom Track -- Check Trend</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Check slope angle trend in unsafe state</desc></param>
+<param name="Bottom Track -- Execution Frequency">
+<name-i18n>Bottom Track -- Execution Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units>Hz</units><desc>Bottom tracker&apos;s execution frequency</desc></param>
+<param name="Bottom Track -- Depth Avoidance">
+<name-i18n>Bottom Track -- Depth Avoidance</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Enable or disable obstacle avoidance during depth control</desc></param>
+<param name="Bottom Track -- Admissible Altitude">
+<name-i18n>Bottom Track -- Admissible Altitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>3.0</default><units>m</units><desc>Admissible altitude when doing depth control</desc></param>
+<param name="Bottom Track -- Minimum Depth">
+<name-i18n>Bottom Track -- Minimum Depth</name-i18n><type>real</type><visibility>user</visibility><scope>maneuver</scope><default>0.0</default><units>m</units><desc>Minimum depth to maintain during bottom tracking</desc></param>
+<param name="Maximum Track Length">
+<name-i18n>Maximum Track Length</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>25000</default><units>m</units><desc>Maximum adimissible track length</desc></param>
+<param name="Horizontal PID Gains">
+<name-i18n>Horizontal PID Gains</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0.35, 0.02, 0</default><units></units><desc></desc><size>3</size></param>
+<param name="Horizontal PID Integral Limit">
+<name-i18n>Horizontal PID Integral Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc></desc></param>
+<param name="Horizontal PID Maximum Value">
+<name-i18n>Horizontal PID Maximum Value</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15</default><units></units><desc></desc></param>
+<param name="Vertical PID Gains">
+<name-i18n>Vertical PID Gains</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>1, 0.2, 0</default><units></units><desc></desc><size>3</size></param>
+<param name="Vertical PID Integral Limit">
+<name-i18n>Vertical PID Integral Limit</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc></desc></param>
+<param name="Maximum Pitch Reference">
+<name-i18n>Maximum Pitch Reference</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>20</default><units></units><desc></desc></param>
+<param name="Vertical Control Feedforward Offset">
+<name-i18n>Vertical Control Feedforward Offset</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc></desc></param>
+<param name="Minimum Surge Speed">
+<name-i18n>Minimum Surge Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc></desc></param>
+<param name="Active">
+<name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Monitor">
+<name-i18n>Collision Ellipse -- Monitor</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Semimajor axes">
+<name-i18n>Collision Ellipse -- Semimajor axes</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>50</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Semiminor axes">
+<name-i18n>Collision Ellipse -- Semiminor axes</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>30</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Orientations">
+<name-i18n>Collision Ellipse -- Orientations</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Origin x">
+<name-i18n>Collision Ellipse -- Origin x</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Origin y">
+<name-i18n>Collision Ellipse -- Origin y</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Inside">
+<name-i18n>Collision Ellipse -- Inside</name-i18n><type>list:boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc></desc></param>
+<param name="Collision Ellipse -- Intersection">
+<name-i18n>Collision Ellipse -- Intersection</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc></desc></param>
+</section>
+<section name="NSB Plan Generator" name-i18n="NSB Plan Generator">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>NSB Plan Generator</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Execution Frequency">
+<name-i18n>Execution Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.1</default><units>Hz</units><desc>Frequency at which task is executed</desc></param>
+<param name="Simulator Step Size">
+<name-i18n>Simulator Step Size</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.1</default><units></units><desc></desc><min>0.01</min></param>
+<param name="Waypoint Parameters">
+<name-i18n>Waypoint Parameters</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0.0000, 0.7854, 1.5708, 2.3562, 3.1416, 3.9270, 4.7124, 5.4978, 6.2832, 7.0686</default><units></units><desc>Create waypoints when the path parameter reaches the given values</desc></param>
+<param name="Plan Name">
+<name-i18n>Plan Name</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>ellipse_formation_underwater_1</default><units></units><desc></desc></param>
+<param name="Goto Start -- Offset">
+<name-i18n>Goto Start -- Offset</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>20</default><units></units><desc></desc></param>
+<param name="Goto Start -- Distance">
+<name-i18n>Goto Start -- Distance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>30</default><units></units><desc></desc></param>
+<param name="Station Keeping -- Radius">
+<name-i18n>Station Keeping -- Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc></param>
+<param name="Vehicle -- Initial Position">
+<name-i18n>Vehicle -- Initial Position</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>60, 15, 0</default><units></units><desc></desc><size>3</size></param>
+<param name="Barycenter -- Initial Position">
+<name-i18n>Barycenter -- Initial Position</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>60, 0, 0</default><units></units><desc></desc><size>3</size></param>
+<param name="Obstacle -- Active">
+<name-i18n>Obstacle -- Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<param name="Obstacle -- Initial Position">
+<name-i18n>Obstacle -- Initial Position</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0, 0</default><units></units><desc></desc></param>
+<param name="Obstacle -- Speed">
+<name-i18n>Obstacle -- Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.6667</default><units></units><desc></desc></param>
+<param name="Obstacle -- Course">
+<name-i18n>Obstacle -- Course</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.57079632</default><units></units><desc></desc></param>
+<param name="Ellipse -- Origin x">
+<name-i18n>Ellipse -- Origin x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>x-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Origin y">
+<name-i18n>Ellipse -- Origin y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>y-coordinate of the center of the ellipse</desc></param>
+<param name="Ellipse -- Depth">
+<name-i18n>Ellipse -- Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc>Depth of the center of the ellipse</desc></param>
+<param name="Ellipse -- Semimajor Axis">
+<name-i18n>Ellipse -- Semimajor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>60</default><units></units><desc>Semimajor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Semiminor Axis">
+<name-i18n>Ellipse -- Semiminor Axis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>40</default><units></units><desc>Semiminor axis of the ellipse</desc><min>10.</min><max>1000.</max></param>
+<param name="Ellipse -- Z Amplitude">
+<name-i18n>Ellipse -- Z Amplitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>4</default><units></units><desc>Amplitude of oscillations in the z-axis</desc><min>0.</min><max>100.</max></param>
+<param name="Ellipse -- Clockwise">
+<name-i18n>Ellipse -- Clockwise</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if the path goes clockwise; false if anticlockwise</desc></param>
+<param name="Ellipse -- Orientation">
+<name-i18n>Ellipse -- Orientation</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Orientation (yaw angle) of the ellipse. Zero means semimajor axis facing north</desc></param>
+<param name="Ellipse -- Z Frequency">
+<name-i18n>Ellipse -- Z Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1</default><units></units><desc>Frequency of oscillations in the z-axis</desc></param>
+<param name="Ellipse -- Initial Phase">
+<name-i18n>Ellipse -- Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.</default><units></units><desc>Initial phase of the ellipse</desc></param>
+<param name="Ellipse -- Z Initial Phase">
+<name-i18n>Ellipse -- Z Initial Phase</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1.5707963267948966</default><units></units><desc>Initial phase of oscillations in the z-axis</desc></param>
+<param name="LOS -- Lookahead Distance">
+<name-i18n>LOS -- Lookahead Distance</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>15.</default><units></units><desc>Lookahead distance of the LOS algorithm</desc><min>1.</min><max>100.</max></param>
+<param name="LOS -- Adaptive">
+<name-i18n>LOS -- Adaptive</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>True if using adaptive lookahead distance</desc></param>
+<param name="LOS -- Speed">
+<name-i18n>LOS -- Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.3</default><units></units><desc>Path following speed</desc><min>0.5</min><max>2.</max></param>
+<param name="LOS -- Gain">
+<name-i18n>LOS -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Path parameter update gain</desc><min>0.1</min><max>2.</max></param>
+<param name="Formation Keeping -- Shape">
+<name-i18n>Formation Keeping -- Shape</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>10, 0, 0</default><units></units><desc>Position of the vehicle within the formation</desc><size>3</size></param>
+<param name="Formation Keeping -- Gain">
+<name-i18n>Formation Keeping -- Gain</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Formation keeping task gain</desc><min>0.</min></param>
+<param name="Formation Keeping -- Maximum Velocity">
+<name-i18n>Formation Keeping -- Maximum Velocity</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units></units><desc>Formation keeping velocity limit</desc><min>0.</min></param>
+<param name="Obstacle Avoidance -- Minimum Cone Angle">
+<name-i18n>Obstacle Avoidance -- Minimum Cone Angle</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Radius">
+<name-i18n>Obstacle Avoidance -- Radius</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5</default><units></units><desc></desc><min>1</min><max>30</max></param>
+<param name="Obstacle Avoidance -- Hysteresis">
+<name-i18n>Obstacle Avoidance -- Hysteresis</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>3</default><units></units><desc></desc><min>0</min><max>10</max></param>
 </section>
 <section name="Navigation" name-i18n="Navigation">
 <param name="Entity Label">
@@ -1507,7 +1829,7 @@
 <param name="LSF Volume Directories">
 <name-i18n>LSF Volume Directories</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default></default><units></units><desc></desc></param>
 <param name="Transports">
-<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Acceleration, AcousticLink, AcousticOperation, AcousticRequest, AcousticStatus, AllocatedControlTorques, AlignmentState, AngularVelocity, Announce, Brake, Chlorophyll, ClockControl, CompassCalibration, Collision, Conductivity, ControlLoops, ControlParcel, CpuUsage, Current, DataSanity, Depth, DesiredControl, DesiredZ, DesiredHeading, DesiredHeadingRate, DesiredPath, DesiredPitch, DesiredSpeed, DevCalibrationControl, DevCalibrationState, DevDataBinary, DevDataText, Distance, DvlRejection, Elevator, EmergencyControl, EmergencyControlState, EntityActivationState, EntityInfo, EntityList, EntityMonitoringState, EntityParameters, EntityState, EstimatedState, EstimatedStreamVelocity, EulerAngles, EulerAnglesDelta, Fluorescein, FollowPath, FollowRefState, FuelLevel, Goto, GpsFix, GpsFixRejection, GroundVelocity, Heartbeat, IdleManeuver, IridiumMsgRx, IridiumMsgTx, IridiumTxStatus, LblConfig, LblEstimate, LblRange, LblRangeAcceptance, LogBookEntry, Loiter, ManeuverControlState, MagneticField, NavigationData, NavigationUncertainty, OperationalLimits, PathControlState, PH, Phycocyanin, Phycoerythrin, PlanControl, PlanControlState, PlanDB, PlanGeneration, PlanSpecification, PlanStatistics, PopEntityParameters, PopUp, PowerChannelControl, PowerChannelState, Pulse, PulseDetectionControl, PushEntityParameters, Pressure, Redox, Rows, QueryEntityParameters, Reference, RemoteActions, RemoteActionsRequest, RemoteState, ReportControl, RhodamineDye, Rpm, RSSI, Salinity, SadcReadings, SimAcousticMessage, SaveEntityParameters, ServoPosition, SetEntityParameters, SetServoPosition, SetThrusterActuation, SoiCommand, SoiState, SonarData, SimulatedState, Sms, SmsRequest, SmsStatus, SoundSpeed, StateReport, StationKeeping, StopManeuver, TCPRequest, TCPStatus, Teleoperation, TeleoperationDone, Temperature, TextMessage, TrexObservation, TrexOperation, TrexPlan, TrexToken, TransmissionRequest, TransmissionStatus, TransportBindings, Turbidity, UamRxFrame, UamTxFrame, UamTxStatus, UamRxRange, UsblAnglesExtended, UsblPositionExtended, UsblFixExtended, UsblModem, UsblConfig, VehicleCommand, VehicleMedium, VehicleState, VelocityDelta, Voltage, WaterDensity, WaterVelocity, YoYo</default><units></units><desc></desc></param>
+<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Acceleration, AcousticLink, AcousticOperation, AcousticRequest, AcousticStatus, AllocatedControlTorques, AlignmentState, AngularVelocity, Announce, Brake, Chlorophyll, ClockControl, CompassCalibration, Collision, Conductivity, ControlLoops, ControlParcel, CpuUsage, Current, DataSanity, Depth, DesiredControl, DesiredZ, DesiredHeading, DesiredHeadingRate, DesiredPath, DesiredPitch, DesiredSpeed, DevCalibrationControl, DevCalibrationState, DevDataBinary, DevDataText, Distance, DvlRejection, Elevator, EmergencyControl, EmergencyControlState, EntityActivationState, EntityInfo, EntityList, EntityMonitoringState, EntityParameters, EntityState, EstimatedState, EstimatedStreamVelocity, EulerAngles, EulerAnglesDelta, Fluorescein, FollowPath, FollowRefState, FuelLevel, Goto, GpsFix, GpsFixRejection, GroundVelocity, Heartbeat, IdleManeuver, IridiumMsgRx, IridiumMsgTx, IridiumTxStatus, LblConfig, LblEstimate, LblRange, LblRangeAcceptance, LogBookEntry, Loiter, ManeuverControlState, MagneticField, NavigationData, NavigationUncertainty, OperationalLimits, PathControlState, PH, Phycocyanin, Phycoerythrin, PlanControl, PlanControlState, PlanDB, PlanGeneration, PlanSpecification, PlanStatistics, PopEntityParameters, PopUp, PowerChannelControl, PowerChannelState, Pulse, PulseDetectionControl, PushEntityParameters, Pressure, Redox, Rows, QueryEntityParameters, Reference, RemoteActions, RemoteActionsRequest, RemoteState, ReportControl, RhodamineDye, Rpm, RSSI, Salinity, SadcReadings, SimAcousticMessage, SaveEntityParameters, ServoPosition, SetEntityParameters, SetServoPosition, SetThrusterActuation, SoiCommand, SoiState, SonarData, SimulatedState, Sms, SmsRequest, SmsStatus, SoundSpeed, StateReport, StationKeeping, StopManeuver, TCPRequest, TCPStatus, Teleoperation, TeleoperationDone, Temperature, TextMessage, TrexObservation, TrexOperation, TrexPlan, TrexToken, TransmissionRequest, TransmissionStatus, TransportBindings, Turbidity, UamRxFrame, UamTxFrame, UamTxStatus, UamRxRange, UsblAnglesExtended, UsblPositionExtended, UsblFixExtended, UsblModem, UsblConfig, VehicleCommand, VehicleMedium, VehicleState, VelocityDelta, Voltage, WaterDensity, WaterVelocity, YoYo, Target, NSBMsg, NSBState, CurvedPathReference</default><units></units><desc></desc></param>
 </section>
 <section name="Back Seat TCP Server" name-i18n="Back Seat TCP Server">
 <param name="Entity Label">
@@ -1547,7 +1869,7 @@
 <param name="Debug Level">
 <name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Spew</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
 <param name="Transports">
-<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Announce, Chlorophyll, Depth, DesiredSpeed, DesiredZ, DissolvedOrganicMatter, EntityActivationState, EntityState, Heartbeat, EntityParameters, GpsFix, QueryEntityParameters, SetEntityParameters, SaveEntityParameters, EntityList, EstimatedState, VehicleState, VehicleMedium, PlanControl, PlanControlState, FollowRefState, EntityActivationState, Temperature, LogBookEntry, Salinity</default><units></units><desc>Messages to transport</desc></param>
+<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Announce, Chlorophyll, Depth, DesiredSpeed, DesiredZ, DissolvedOrganicMatter, EntityActivationState, EntityState, Heartbeat, EntityParameters, GpsFix, QueryEntityParameters, SetEntityParameters, SaveEntityParameters, EntityList, EstimatedState, VehicleState, VehicleMedium, PlanControl, PlanControlState, FollowRefState, EntityActivationState, Temperature, LogBookEntry, Salinity, NSBMsg, Target</default><units></units><desc>Messages to transport</desc></param>
 <param name="Rate Limiters">
 <name-i18n>Rate Limiters</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>EstimatedState:2, NavigationUncertainty:2</default><units></units><desc>List of &lt;Message&gt;:&lt;Frequency&gt;</desc></param>
 <param name="Filtered Entities">
@@ -1618,6 +1940,50 @@
 <name-i18n>Dynamic Nodes</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Allow use of dynamic nodes.</desc></param>
 <param name="Local Messages Only">
 <name-i18n>Local Messages Only</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Only transmit messsages from local system.</desc></param>
+<param name="Custom Service Type">
+<name-i18n>Custom Service Type</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default></default><units></units><desc>Optional custom service type (imc+udp+&lt;Custom Service Type&gt;), empty entry gives default service (imc+udp)</desc></param>
+</section>
+<section name="NSB Communications" name-i18n="NSB Communications">
+<param name="Entity Label">
+<name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>NSB Communications</default><units></units><desc>Main entity label</desc></param>
+<param name="Execution Priority">
+<name-i18n>Execution Priority</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>10</default><units></units><desc>Execution priority</desc></param>
+<param name="Activation Time">
+<name-i18n>Activation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Deactivation Time">
+<name-i18n>Deactivation Time</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Debug Level">
+<name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>None</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
+<param name="Local Port">
+<name-i18n>Local Port</name-i18n><type>integer</type><visibility>developer</visibility><scope>global</scope><default>6031</default><units></units><desc>Local UDP port to listen on</desc></param>
+<param name="Contact Timeout">
+<name-i18n>Contact Timeout</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>30</default><units>s</units><desc></desc></param>
+<param name="Contact Refresh Periodicity">
+<name-i18n>Contact Refresh Periodicity</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>5.0</default><units>s</units><desc></desc></param>
+<param name="Print Outgoing Messages">
+<name-i18n>Print Outgoing Messages</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Print outgoing messages (Debug)</desc></param>
+<param name="Print Incoming Messages">
+<name-i18n>Print Incoming Messages</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc>Print incoming messages (Debug)</desc></param>
+<param name="Static Destinations">
+<name-i18n>Static Destinations</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>127.0.0.1:6032, 127.0.0.1:6033, 127.0.0.1:6034</default><units></units><desc>List of &lt;IPv4&gt;:&lt;Port&gt; destinations that will always receive outgoing messages</desc></param>
+<param name="Rate Limiters">
+<name-i18n>Rate Limiters</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>NSBMsg:1</default><units></units><desc>List of &lt;Message&gt;:&lt;Frequency&gt;</desc></param>
+<param name="Filtered Entities">
+<name-i18n>Filtered Entities</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>NSBMsg:Consensus</default><units></units><desc>List of &lt;Message&gt;:&lt;Entity&gt;+&lt;Entity&gt; that define the source entities allowed to pass message of a specific message type.</desc></param>
+<param name="Announce Service">
+<name-i18n>Announce Service</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Announce this transport to services or not</desc></param>
+<param name="Communication Range">
+<name-i18n>Communication Range</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units>m</units><desc>Communication range (0 for infinite)</desc></param>
+<param name="Underwater Communications">
+<name-i18n>Underwater Communications</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Allow underwater communication when limited comms are being simulated</desc></param>
+<param name="Transports">
+<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>NSBMsg</default><units></units><desc>List of messages to transport</desc></param>
+<param name="Always Transmitted Messages">
+<name-i18n>Always Transmitted Messages</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default></default><units></units><desc>List of messages that will always be transmitted disregarding communication limitations</desc></param>
+<param name="Dynamic Nodes">
+<name-i18n>Dynamic Nodes</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc>Allow use of dynamic nodes.</desc></param>
+<param name="Local Messages Only">
+<name-i18n>Local Messages Only</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc>Only transmit messsages from local system.</desc></param>
 <param name="Custom Service Type">
 <name-i18n>Custom Service Type</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default></default><units></units><desc>Optional custom service type (imc+udp+&lt;Custom Service Type&gt;), empty entry gives default service (imc+udp)</desc></param>
 </section>
