@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<config format="1" version="2020.01.0 (experiment/NTNU-distributed-NSB,6bf868132,dirty)" system="lauv-simulator-1" i18n="en_US">
+<config format="1" version="2020.01.0 (experiment/NTNU-distributed-NSB,d53ef3654,dirty)" system="lauv-simulator-1" i18n="en_US">
 <section name="Text Message Parser" name-i18n="Text Message Parser">
 <param name="Entity Label">
 <name-i18n>Entity Label</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>Text Message Parser</default><units></units><desc>Main entity label</desc></param>
@@ -767,7 +767,7 @@
 <param name="Experiment Stop Time">
 <name-i18n>Experiment Stop Time</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stopped after the given time. Enter negative value to ignore this.</desc></param>
 <param name="Experiment Stop Parameter">
-<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
+<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>6.2832</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
 </section>
 <section name="Distributed NSB" name-i18n="Distributed NSB">
 <param name="Entity Label">
@@ -827,7 +827,7 @@
 <param name="Experiment Stop Time">
 <name-i18n>Experiment Stop Time</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stopped after the given time. Enter negative value to ignore this.</desc></param>
 <param name="Experiment Stop Parameter">
-<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-1</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
+<name-i18n>Experiment Stop Parameter</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>6.2832</default><units></units><desc>The task is stop when path parameter exceeds the given value. Enter negative value to ignore this.</desc></param>
 </section>
 <section name="Obstacle Simulator" name-i18n="Obstacle Simulator">
 <param name="Entity Label">
@@ -842,16 +842,14 @@
 <name-i18n>Debug Level</name-i18n><type>string</type><visibility>developer</visibility><scope>global</scope><default>None</default><units></units><desc></desc><values>None, Debug, Trace, Spew</values><values-i18n>None, Debug, Trace, Spew</values-i18n></param>
 <param name="Execution Frequency">
 <name-i18n>Execution Frequency</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.5</default><units>Hz</units><desc>Frequency at which task is executed</desc></param>
-<param name="Speed">
-<name-i18n>Speed</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.6667</default><units></units><desc></desc></param>
-<param name="Origin Latitude">
-<name-i18n>Origin Latitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.71816285</default><units></units><desc></desc></param>
-<param name="Origin Longitude">
-<name-i18n>Origin Longitude</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>-0.15166961</default><units></units><desc></desc></param>
-<param name="Course">
-<name-i18n>Course</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>1.57079632</default><units></units><desc></desc></param>
-<param name="Depth">
-<name-i18n>Depth</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Initial Position -- x">
+<name-i18n>Initial Position -- x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Initial Position -- y">
+<name-i18n>Initial Position -- y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Velocity -- x">
+<name-i18n>Velocity -- x</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0</default><units></units><desc></desc></param>
+<param name="Velocity -- y">
+<name-i18n>Velocity -- y</name-i18n><type>real</type><visibility>developer</visibility><scope>global</scope><default>0.6667</default><units></units><desc></desc></param>
 <param name="Active">
 <name-i18n>Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
 </section>
@@ -983,7 +981,7 @@
 <param name="Barycenter -- Initial Position">
 <name-i18n>Barycenter -- Initial Position</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>60, 0, 0</default><units></units><desc></desc><size>3</size></param>
 <param name="Obstacle -- Active">
-<name-i18n>Obstacle -- Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>false</default><units></units><desc></desc></param>
+<name-i18n>Obstacle -- Active</name-i18n><type>boolean</type><visibility>developer</visibility><scope>global</scope><default>true</default><units></units><desc></desc></param>
 <param name="Obstacle -- Initial Position">
 <name-i18n>Obstacle -- Initial Position</name-i18n><type>list:real</type><visibility>developer</visibility><scope>global</scope><default>0, 0</default><units></units><desc></desc></param>
 <param name="Obstacle -- Speed">
@@ -1829,7 +1827,7 @@
 <param name="LSF Volume Directories">
 <name-i18n>LSF Volume Directories</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default></default><units></units><desc></desc></param>
 <param name="Transports">
-<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Acceleration, AcousticLink, AcousticOperation, AcousticRequest, AcousticStatus, AllocatedControlTorques, AlignmentState, AngularVelocity, Announce, Brake, Chlorophyll, ClockControl, CompassCalibration, Collision, Conductivity, ControlLoops, ControlParcel, CpuUsage, Current, DataSanity, Depth, DesiredControl, DesiredZ, DesiredHeading, DesiredHeadingRate, DesiredPath, DesiredPitch, DesiredSpeed, DevCalibrationControl, DevCalibrationState, DevDataBinary, DevDataText, Distance, DvlRejection, Elevator, EmergencyControl, EmergencyControlState, EntityActivationState, EntityInfo, EntityList, EntityMonitoringState, EntityParameters, EntityState, EstimatedState, EstimatedStreamVelocity, EulerAngles, EulerAnglesDelta, Fluorescein, FollowPath, FollowRefState, FuelLevel, Goto, GpsFix, GpsFixRejection, GroundVelocity, Heartbeat, IdleManeuver, IridiumMsgRx, IridiumMsgTx, IridiumTxStatus, LblConfig, LblEstimate, LblRange, LblRangeAcceptance, LogBookEntry, Loiter, ManeuverControlState, MagneticField, NavigationData, NavigationUncertainty, OperationalLimits, PathControlState, PH, Phycocyanin, Phycoerythrin, PlanControl, PlanControlState, PlanDB, PlanGeneration, PlanSpecification, PlanStatistics, PopEntityParameters, PopUp, PowerChannelControl, PowerChannelState, Pulse, PulseDetectionControl, PushEntityParameters, Pressure, Redox, Rows, QueryEntityParameters, Reference, RemoteActions, RemoteActionsRequest, RemoteState, ReportControl, RhodamineDye, Rpm, RSSI, Salinity, SadcReadings, SimAcousticMessage, SaveEntityParameters, ServoPosition, SetEntityParameters, SetServoPosition, SetThrusterActuation, SoiCommand, SoiState, SonarData, SimulatedState, Sms, SmsRequest, SmsStatus, SoundSpeed, StateReport, StationKeeping, StopManeuver, TCPRequest, TCPStatus, Teleoperation, TeleoperationDone, Temperature, TextMessage, TrexObservation, TrexOperation, TrexPlan, TrexToken, TransmissionRequest, TransmissionStatus, TransportBindings, Turbidity, UamRxFrame, UamTxFrame, UamTxStatus, UamRxRange, UsblAnglesExtended, UsblPositionExtended, UsblFixExtended, UsblModem, UsblConfig, VehicleCommand, VehicleMedium, VehicleState, VelocityDelta, Voltage, WaterDensity, WaterVelocity, YoYo, Target, NSBMsg, NSBState, CurvedPathReference</default><units></units><desc></desc></param>
+<name-i18n>Transports</name-i18n><type>list:string</type><visibility>developer</visibility><scope>global</scope><default>Abort, Acceleration, AcousticLink, AcousticOperation, AcousticRequest, AcousticStatus, AllocatedControlTorques, AlignmentState, AngularVelocity, Announce, Brake, Chlorophyll, ClockControl, CompassCalibration, Collision, Conductivity, ControlLoops, ControlParcel, CpuUsage, Current, DataSanity, Depth, DesiredControl, DesiredZ, DesiredHeading, DesiredHeadingRate, DesiredPath, DesiredPitch, DesiredSpeed, DevCalibrationControl, DevCalibrationState, DevDataBinary, DevDataText, Distance, DvlRejection, Elevator, EmergencyControl, EmergencyControlState, EntityActivationState, EntityInfo, EntityList, EntityMonitoringState, EntityParameters, EntityState, EstimatedState, EstimatedStreamVelocity, EulerAngles, EulerAnglesDelta, Fluorescein, FollowPath, FollowRefState, FuelLevel, Goto, GpsFix, GpsFixRejection, GroundVelocity, Heartbeat, IdleManeuver, IridiumMsgRx, IridiumMsgTx, IridiumTxStatus, LblConfig, LblEstimate, LblRange, LblRangeAcceptance, LogBookEntry, Loiter, ManeuverControlState, MagneticField, NavigationData, NavigationUncertainty, OperationalLimits, PathControlState, PH, Phycocyanin, Phycoerythrin, PlanControl, PlanControlState, PlanDB, PlanGeneration, PlanSpecification, PlanStatistics, PopEntityParameters, PopUp, PowerChannelControl, PowerChannelState, Pulse, PulseDetectionControl, PushEntityParameters, Pressure, Redox, Rows, QueryEntityParameters, Reference, RemoteActions, RemoteActionsRequest, RemoteState, ReportControl, RhodamineDye, Rpm, RSSI, Salinity, SadcReadings, SimAcousticMessage, SaveEntityParameters, ServoPosition, SetEntityParameters, SetServoPosition, SetThrusterActuation, SoiCommand, SoiState, SonarData, SimulatedState, Sms, SmsRequest, SmsStatus, SoundSpeed, StateReport, StationKeeping, StopManeuver, TCPRequest, TCPStatus, Teleoperation, TeleoperationDone, Temperature, TextMessage, TrexObservation, TrexOperation, TrexPlan, TrexToken, TransmissionRequest, TransmissionStatus, TransportBindings, Turbidity, UamRxFrame, UamTxFrame, UamTxStatus, UamRxRange, UsblAnglesExtended, UsblPositionExtended, UsblFixExtended, UsblModem, UsblConfig, VehicleCommand, VehicleMedium, VehicleState, VelocityDelta, Voltage, WaterDensity, WaterVelocity, YoYo, Obstacle, NSBMsg, NSBState</default><units></units><desc></desc></param>
 </section>
 <section name="Back Seat TCP Server" name-i18n="Back Seat TCP Server">
 <param name="Entity Label">
